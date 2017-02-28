@@ -6,13 +6,12 @@ output: html_document
 ---
 ```{r setup, include=FALSE, cache = TRUE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("C:\\Users\\George\\Documents\\Learning Books\\Data Science\\Coursera DataScience\\C5 Reproduce Research\\Proj 1 Reproduce Research")
 
 library(knitr) # may be required to run rmarkdown::render("Proj1 Repro Research.Rmd")
 ```
-# Reproducable Research : Project 1
+# Reproducable Research: Project 1
 
-This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
+This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and includes the number of steps taken in 5 minute intervals each day.
 
 ## Loading and preprocessing the data
 Process/transform the data (if necessary) into a format suitable for your analysis
@@ -28,7 +27,7 @@ str(mData)
 
 For this part of the assignment, you can ignore the missing values in the dataset.
 
-1. Calculate the total number of steps taken per day
+1. Calculate the total number of steps taken per day.
 
 ```{r}
 library(dplyr)
@@ -42,7 +41,7 @@ head(s_Steps, 3)
 
 
 
-2. Make a histogram of the total number of steps taken each day
+2. Make a histogram of the total number of steps taken each day.
 
 ```{r}
 hist(s_Steps$`sum(steps)`, breaks=6, main = "Frequency of Daily Step Totals", xlab="Daily Step Counts")
