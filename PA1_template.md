@@ -141,16 +141,9 @@ str(mData)</code></pre>
 <ol style="list-style-type: decimal">
 <li>Calculate the total number of steps taken per day.</li>
 </ol>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>by_Date &lt;- group_by(mData, date)
+<pre class="r"><code>library(dplyr)
+
+by_Date &lt;- group_by(mData, date)
 
 s_Steps &lt;- summarise(by_Date, sum(steps))
 
